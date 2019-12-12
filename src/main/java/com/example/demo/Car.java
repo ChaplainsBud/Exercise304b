@@ -27,6 +27,15 @@ public class Car {
     @Size(min=3)
     private String model;
 
+    public Car(@NotNull @Min(4) int year, @NotNull @Size(min = 3) String make, @NotNull @Size(min = 3) String model) {
+        this.year = year;
+        this.make = make;
+        this.model = model;
+    }
+
+    public Car() {
+    }
+
     public long getId() {
         return id;
     }
